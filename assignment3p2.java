@@ -1,18 +1,17 @@
-import java.io.*;
+import java.util.Scanner;
 
-public class assignment3 {
-    public static void main(String[] args) throws IOException {
-
-        BufferedReader br =  new BufferedReader(new InputStreamReader(System.in));
+public class assignment3p2 {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
 
         System.out.print("Enter NSAT score: ");
-        double nsat = Double.parseDouble(br.readLine());
+        double nsat = input.nextDouble();
 
         System.out.print("Enter parents' monthly salary: ");
-        double salary = Double.parseDouble(br.readLine());
+        double salary = input.nextDouble();
 
         System.out.print("Enter entrance examination score: ");
-        double entrance = Double.parseDouble(br.readLine());
+        double entrance = input.nextDouble();
 
         double average = (nsat + entrance) / 2;
 
@@ -23,6 +22,7 @@ public class assignment3 {
         } else {
             System.out.println("Application Status: FOR FURTHER STUDY");
         }
-
+            input.close();
+        }
     }
-}
+
